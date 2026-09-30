@@ -283,14 +283,14 @@ body.dark .theme-toggle__knob {
     padding: 80px 0;
     background:
         linear-gradient(180deg, rgba(255, 248, 231, 0.6), rgba(255, 241, 207, 0.85)),
-        url('https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=1600&q=80') center/cover no-repeat;
+        url('https://ir.ozone.ru/s3/multimedia-1-j/12788660539.jpg') center/cover no-repeat;
     transition: background var(--transition);
 }
 
 body.dark .hero {
     background:
         linear-gradient(180deg, rgba(19, 19, 19, 0.75), rgba(28, 28, 28, 0.9)),
-        url('https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=1600&q=80') center/cover no-repeat;
+        url('https://ir.ozone.ru/s3/multimedia-1-j/12788660539.jpg') center/cover no-repeat;
 }
 
 .hero__bricks {
