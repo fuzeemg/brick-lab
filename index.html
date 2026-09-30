@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BrickLab — магазин конструкторов LEGO с доставкой по России">
+    <title>BrickLab — магазин конструкторов</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===================== ШАПКА ===================== -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <span class="nav__logo-brick"></span>
+                BrickLab
+            </a>
+
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#catalog" class="nav__link">Каталог</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">О нас</a></li>
+                <li class="nav__item"><a href="#form" class="nav__link">Подбор</a></li>
+            </ul>
+
+            <div class="nav__actions">
+                <button class="cart" id="cartBtn" type="button" aria-label="Корзина">
+                    <span class="cart__label">Корзина</span>
+                    <span class="cart__count" id="cartCount">0</span>
+                </button>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Сменить тему">
+                    <span class="theme-toggle__knob"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===================== ОБЛОЖКА ===================== -->
+    <section class="hero">
+        <div class="hero__bricks" aria-hidden="true">
+            <span class="hero__brick hero__brick--red"></span>
+            <span class="hero__brick hero__brick--yellow"></span>
+            <span class="hero__brick hero__brick--blue"></span>
+            <span class="hero__brick hero__brick--green"></span>
+        </div>
+
+        <div class="hero__content container">
+            <p class="hero__tag">Конструкторы для всех возрастов</p>
+            <h1 class="hero__title">Собери<br>свой мир</h1>
+            <p class="hero__text">
+                Более 800 наборов LEGO в наличии. Привезём в течение суток
+                по Москве и отправим по всей России.
+            </p>
+            <a href="#catalog" class="btn btn--primary">Подробнее</a>
+        </div>
+    </section>
+
+    <!-- ===================== КАТАЛОГ ===================== -->
+    <section class="catalog container" id="catalog">
+        <header class="catalog__head">
+            <h2 class="section-title">Хиты продаж</h2>
+            <p class="section-lead">Наборы, которые выбирают чаще всего</p>
+        </header>
+
+        <div class="cards">
+
+            <article class="card">
+                <div class="card__img">
+                    <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=700&q=80" alt="Набор Космическая станция">
+                </div>
+                <div class="card__body">
+                    <h3 class="card__title">Космическая станция</h3>
+                    <p class="card__desc">1420 деталей, 6 минифигурок и отстыковываемый модуль. Для настоящих исследователей.</p>
+                    <span class="card__price">12 990 ₽</span>
+                    <button class="btn btn--buy" data-action="add">В корзину</button>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card__img">
+                    <img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?w=700&q=80" alt="Набор Гоночный болид">
+                </div>
+                <div class="card__body">
+                    <h3 class="card__title">Гоночный болид</h3>
+                    <p class="card__desc">860 деталей, рабочая подвеска и рулевое управление. Скорость на максимум.</p>
+                    <span class="card__price">8 490 ₽</span>
+                    <button class="btn btn--buy" data-action="add">В корзину</button>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card__img">
+                    <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=700&q=80" alt="Набор Средневековый замок">
+                </div>
+                <div class="card__body">
+                    <h3 class="card__title">Средневековый замок</h3>
+                    <p class="card__desc">2100 деталей, подъёмный мост и 8 минифигурок. Эпическая стройка на выходные.</p>
+                    <span class="card__price">18 700 ₽</span>
+                    <button class="btn btn--buy" data-action="add">В корзину</button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ===================== ИНТЕРАКТИВ (СЛАЙДЕР) ===================== -->
+    <section class="promo container" id="about">
+        <div class="slider" id="slider">
+            <div class="slider__track" id="sliderTrack">
+                <div class="slider__slide slider__slide--red">
+                    <h3>Бесплатная доставка</h3>
+                    <p>При заказе от 5 000 ₽ по всей России</p>
+                </div>
+                <div class="slider__slide slider__slide--yellow">
+                    <h3>Скидка 15% на первый заказ</h3>
+                    <p>Промокод BRICK15 действует до конца месяца</p>
+                </div>
+                <div class="slider__slide slider__slide--blue">
+                    <h3>Подарочная упаковка</h3>
+                    <p>Упакуем набор и добавим открытку бесплатно</p>
+                </div>
+            </div>
+            <button class="slider__btn slider__btn--prev" id="sliderPrev" aria-label="Назад">‹</button>
+            <button class="slider__btn slider__btn--next" id="sliderNext" aria-label="Вперёд">›</button>
+            <div class="slider__dots" id="sliderDots"></div>
+        </div>
+    </section>
+
+    <!-- ===================== ФОРМА (5 ВОПРОСОВ) ===================== -->
+    <section class="form-section" id="form">
+        <div class="container form-section__inner">
+            <h2 class="section-title">Подберём набор</h2>
+            <p class="form-section__lead">Ответьте на 5 вопросов — пришлём персональную подборку</p>
+
+            <form class="form" id="quizForm" novalidate>
+
+                <div class="form__group">
+                    <label class="form__label" for="q1">1. Как вас зовут?</label>
+                    <input class="form__input" type="text" id="q1" name="name" placeholder="Ваше имя" required>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="q2">2. Email для ответа</label>
+                    <input class="form__input" type="email" id="q2" name="email" placeholder="you@mail.ru" required>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="q3">3. Для кого набор?</label>
+                    <select class="form__input" id="q3" name="forWhom" required>
+                        <option value="">— выберите —</option>
+                        <option value="child">Ребёнку</option>
+                        <option value="teen">Подростку</option>
+                        <option value="adult">Взрослому коллекционеру</option>
+                    </select>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label">4. Любимая тема</label>
+                    <div class="form__options">
+                        <label class="form__radio">
+                            <input type="radio" name="theme" value="space" required>
+                            <span>Космос</span>
+                        </label>
+                        <label class="form__radio">
+                            <input type="radio" name="theme" value="city">
+                            <span>Город</span>
+                        </label>
+                        <label class="form__radio">
+                            <input type="radio" name="theme" value="technic">
+                            <span>Техника</span>
+                        </label>
+                        <label class="form__radio">
+                            <input type="radio" name="theme" value="castle">
+                            <span>Замки</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="q5">5. Бюджет на подарок</label>
+                    <select class="form__input" id="q5" name="budget" required>
+                        <option value="">— выберите —</option>
+                        <option value="low">до 5 000 ₽</option>
+                        <option value="mid">5 000 – 15 000 ₽</option>
+                        <option value="high">свыше 15 000 ₽</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn--primary form__submit">Получить подборку</button>
+                <p class="form__message" id="formMessage"></p>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- ===================== ПОДВАЛ ===================== -->
+    <footer class="footer" id="contacts">
+        <div class="container footer__inner">
+            <div class="footer__col">
+                <p class="footer__logo">
+                    <span class="footer__logo-brick"></span>
+                    BrickLab
+                </p>
+                <p class="footer__note">Официальный магазин конструкторов с 2016 года</p>
+            </div>
+            <div class="footer__col">
+                <p class="footer__title">Контакты</p>
+                <p>+7 (495) 320-77-45</p>
+                <p>hello@bricklab.ru</p>
+                <p>Москва, ул. Кутузовская, 12</p>
+            </div>
+            <div class="footer__col">
+                <p class="footer__title">Разделы</p>
+                <p><a href="#catalog" class="footer__link">Каталог</a></p>
+                <p><a href="#about" class="footer__link">О нас</a></p>
+                <p><a href="#form" class="footer__link">Подбор</a></p>
+            </div>
+        </div>
+        <p class="copyright">© 2026 BrickLab. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
